@@ -1,28 +1,15 @@
-<?php require("header.php"); ?>
+
 <?php 
   include "prim.php";
 
   $primsAlgorithm = new PrimsAlgorithm();
-  if(isset($_POST['btn-upload']))
-    { 
-      if(isset($_FILES['input_file'])){
-          $fileData = $_FILES['input_file'];
-          $node_no = $_POST['node_no'];
-            $new_graph = processInputData($node_no, $fileData);
-         
-            $primsAlgorithm->Prim($new_graph, $node_no);
-      } else {
-        echo "you did not select any input file";
-       }
-    } 
-    elseif(isset($_POST['node_no']) && isset($_FILES['file'])){
+ if(isset($_POST['node_no']) && isset($_FILES['file'])){
         
         $fileData = $_FILES['file'];
         $node_no = $_POST['node_no'];
         $graph = processInputData($node_no, $fileData);
 
         $response = $primsAlgorithm->Prim($graph, $node_no, $stepProcess = 1);
-
 
         if(!empty(array_filter($response))){
           $response['status'] = 1;
@@ -31,8 +18,8 @@
         }
 
         //header("Content-Type: application/json", true);
-        //echo json_encode($response);
-        return $response;
+        echo json_encode($response);
+        return ;
     } else {
       die("Not catching Ajax Call");
     }
@@ -69,10 +56,8 @@
         }else{
            echo "file is not uploaded.";
       }
-
       fclose($myfile);
+
       return $new_graph;
   }
 ?>
-
-<?php require("footer.php"); ?>

@@ -31,16 +31,14 @@
         $(document).ready( function() {
 
             $(':file').on('fileselect', function(event, numFiles, label) {
-
                 var input = $(this).parents('.input-group').find(':text'),
                     log = numFiles > 1 ? numFiles + ' files selected' : label;
                       console.log(log);
                 if( input.length ) {
                     input.val(log);
                 } else {
-                    if( log ) alert(log);
+                    //if( log ) alert(log);
                 }
-
             });
 
             // reload the page
@@ -74,18 +72,18 @@
 
               $.ajax({
                 //dataType: 'json',
-                url: "second.php",
+                url: "ajax.php",
                 type: "POST",
                 data: fd, //<----post here the files and other values
                 processData: false,  // tell jQuery not to process the data
                 contentType: false ,  // tell jQuery not to set contentType
+                cache: false,
                 success: function(data) {
-                  //alert(data['status']);
-                  console.log(data.status);
-                  console.log(data);
+                  var json = $.parseJSON(data);
+                  console.log(json.parent);
                 },
-                error: function() {
-                  alert('does not work');
+                error: function(error) {
+                  alert(error);
                 }
               });
             });

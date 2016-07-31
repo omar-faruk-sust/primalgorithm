@@ -23,20 +23,22 @@
 		}
 
 		function PrintResult($parent, $graph, $verticesCount)
-		{
-
+		{ 
+			$edge = $verticesCount - 1;
 			echo '<div class="container"><div class="row"><div class="col-sm-1">
           		</div><div class="panel panel-primary">';
 			echo '<div class="panel-heading">Output Panel</div>';
-			echo '<div class="panel-body">
-			<p>The minimum cost of spanning tree is shown below</p>
-			</div>';
+			echo '<div class="panel-body">';
+			echo '<p>Total number of nodes ='.$verticesCount.'</p>';
+			echo '<p>Total number of edges = '.$edge.'</p>';
+			
+			echo '</div>';
 
 			echo '<table class="table">';
 			echo "<thead>
 		      <tr>
-		        <th>Edge - Edge</th>
-		        <th>Weight</th>
+		        <th>edges</th>
+		        <th>Cost</th>
 		        </tr>
 		    </thead>";
 			$sum = 0;
@@ -45,7 +47,7 @@
 			for ($i = 1; $i < $verticesCount; ++$i) {
 				echo "<tr>";
 				$sum = $sum + $graph[$i][$parent[$i]];
-				echo "<td>". $parent[$i] . " - " . $i ."</td>";
+				echo "<td>"."(". $parent[$i] . " , " . $i. ")" ."</td>";
 				echo "<td>". $graph[$i][$parent[$i]] ."</td>";
 				$str .= " ".$graph[$i][$parent[$i]] ."+";
 				echo "</td>";

@@ -1,0 +1,13 @@
+Total number of nodes = 10
+Total number of edges = 9
+List of edges & their costs: 
+( 5 , 1 ) 	 edge cost:   246
+( 4 , 2 ) 	 edge cost:   236
+( 8 , 3 ) 	 edge cost:   237
+( 0 , 4 ) 	 edge cost:   265
+( 0 , 5 ) 	 edge cost:   232
+( 9 , 6 ) 	 edge cost:   214
+( 3 , 7 ) 	 edge cost:   229
+( 2 , 8 ) 	 edge cost:   236
+( 1 , 9 ) 	 edge cost:   229
+Total cost of minimum spanning tree is = 2124

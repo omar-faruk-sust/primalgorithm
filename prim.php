@@ -24,6 +24,9 @@
 
 		function PrintResult($parent, $graph, $verticesCount)
 		{ 
+			$outputFile = fopen("Result_of_Graph_G_N_". $verticesCount . ".txt", "w");
+			$outputString.=""; 
+			
 			$edge = $verticesCount - 1;
 			echo '<div class="container"><div class="row"><div class="col-sm-1">
           		</div><div class="panel panel-primary">';
@@ -41,13 +44,16 @@
 		        <th>Cost</th>
 		        </tr>
 		    </thead>";
+		    $outputString.="Total number of nodes = ". $verticesCount."\n";
+		    $outputString.="Total number of edges = ". $edge."\n";
 			$sum = 0;
 			$str = "Total cost of minimum spanning tree is = SUM OF (";
-			
+			$outputString.="List of edges & their costs: \n";
 			for ($i = 1; $i < $verticesCount; ++$i) {
 				echo "<tr>";
 				$sum = $sum + $graph[$i][$parent[$i]];
 				echo "<td>"."(". $parent[$i] . " , " . $i. ")" ."</td>";
+				$outputString.="( ".$parent[$i]." , ".$i." ) \t edge cost:   ".$graph[$i][$parent[$i]]."\n";
 				echo "<td>". $graph[$i][$parent[$i]] ."</td>";
 				$str .= " ".$graph[$i][$parent[$i]] ."+";
 				echo "</td>";
@@ -57,9 +63,11 @@
 			echo '</table>';
 
 			echo $str . " = " .$sum;
-
+			$outputString.="Total cost of minimum spanning tree is = " .$sum."\n";
 			echo '<div class="col-sm-1">
             </div></div></div></div>';
+            fwrite($outputFile, $outputString);
+            fclose($outputFile);
 
 		}
 

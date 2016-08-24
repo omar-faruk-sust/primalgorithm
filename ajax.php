@@ -17,7 +17,6 @@
           $response['status'] = 0;
         }
 
-        //header("Content-Type: application/json", true);
         echo json_encode($response);
         return ;
     } else {

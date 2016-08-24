@@ -20,6 +20,18 @@
                     </div>
 
                     <div class="form-group">
+                      <label for="algorithm" class="col-sm-2 control-label">Choose Algorithm</label>
+                      <div class="col-sm-10">
+                       <label class="radio-inline">
+                          <input type="radio" name="optradio">Prim
+                        </label>
+                        <label class="radio-inline">
+                          <input type="radio" name="optradio">kruskal
+                        </label>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
                       <div class="col-sm-2 control-label"></div>
                       <div class="col-sm-10">
                         <div class="input-group">

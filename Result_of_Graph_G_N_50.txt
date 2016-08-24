@@ -1,0 +1,53 @@
+Total number of nodes = 50
+Total number of edges = 49
+List of edges & their costs: 
+( 2 , 1 ) 	 edge cost:   216
+( 39 , 2 ) 	 edge cost:   220
+( 41 , 3 ) 	 edge cost:   220
+( 37 , 4 ) 	 edge cost:   224
+( 23 , 5 ) 	 edge cost:   220
+( 31 , 6 ) 	 edge cost:   231
+( 1 , 7 ) 	 edge cost:   222
+( 1 , 8 ) 	 edge cost:   210
+( 29 , 9 ) 	 edge cost:   226
+( 39 , 10 ) 	 edge cost:   217
+( 28 , 11 ) 	 edge cost:   218
+( 13 , 12 ) 	 edge cost:   206
+( 0 , 13 ) 	 edge cost:   212
+( 25 , 14 ) 	 edge cost:   236
+( 4 , 15 ) 	 edge cost:   222
+( 22 , 16 ) 	 edge cost:   207
+( 38 , 17 ) 	 edge cost:   208
+( 15 , 18 ) 	 edge cost:   218
+( 31 , 19 ) 	 edge cost:   220
+( 2 , 20 ) 	 edge cost:   222
+( 27 , 21 ) 	 edge cost:   211
+( 26 , 22 ) 	 edge cost:   228
+( 8 , 23 ) 	 edge cost:   218
+( 45 , 24 ) 	 edge cost:   232
+( 6 , 25 ) 	 edge cost:   234
+( 15 , 26 ) 	 edge cost:   221
+( 12 , 27 ) 	 edge cost:   218
+( 49 , 28 ) 	 edge cost:   214
+( 37 , 29 ) 	 edge cost:   223
+( 48 , 30 ) 	 edge cost:   222
+( 8 , 31 ) 	 edge cost:   221
+( 20 , 32 ) 	 edge cost:   224
+( 5 , 33 ) 	 edge cost:   235
+( 47 , 34 ) 	 edge cost:   224
+( 5 , 35 ) 	 edge cost:   230
+( 27 , 36 ) 	 edge cost:   232
+( 47 , 37 ) 	 edge cost:   205
+( 12 , 38 ) 	 edge cost:   223
+( 21 , 39 ) 	 edge cost:   218
+( 23 , 40 ) 	 edge cost:   227
+( 43 , 41 ) 	 edge cost:   217
+( 47 , 42 ) 	 edge cost:   221
+( 17 , 43 ) 	 edge cost:   218
+( 3 , 44 ) 	 edge cost:   217
+( 29 , 45 ) 	 edge cost:   225
+( 19 , 46 ) 	 edge cost:   229
+( 39 , 47 ) 	 edge cost:   221
+( 29 , 48 ) 	 edge cost:   214
+( 31 , 49 ) 	 edge cost:   221
+Total cost of minimum spanning tree is = 10818
